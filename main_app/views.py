@@ -11,9 +11,6 @@ def ghost_index(request):
   ghosts = Ghost.objects.all()
   return render(request, 'ghosts/index.html', { 'ghosts': ghosts })
 
-ghosts = [
-  Ghost('Lolo', 2, 'tabby', 'Kinda rude.'),
-  Ghost('Sachi', 3, 'tortoiseshell', 'Looks like a turtle.'),
-  Ghost('Fancy', 4, 'bombay', 'Happy fluff ball.'),
-  Ghost('Bonk', 1, 'selkirk rex', 'Meows loudly.')
-]
+def ghost_detail(request, ghost_id):
+  ghost = Ghost.objects.get(id=ghost_id)
+  return render(request, 'ghosts/detail.html', { 'ghost': ghost })
