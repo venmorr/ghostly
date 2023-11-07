@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Ghost
 
 def home(request):
@@ -12,8 +14,9 @@ def home(request):
 def about(request):
   return render(request, 'about.html')
 
+@login_required
 def ghost_index(request):
-  ghosts = Ghost.objects.all()
+  ghosts = Ghost.objects.filter(user=request.user)
   return render(request, 'ghosts/index.html', { 'ghosts': ghosts })
 
 def ghost_detail(request, ghost_id):
@@ -27,7 +30,7 @@ class Home(LoginView):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
-class GhostCreate(CreateView):
+class GhostCreate(LoginRequiredMixin, CreateView):
   model = Ghost
   fields = '__all__'
   success_url = '/ghosts/'
