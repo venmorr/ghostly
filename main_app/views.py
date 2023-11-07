@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.views import LoginView
 from .models import Ghost
 
 def home(request):
@@ -16,6 +17,9 @@ def ghost_index(request):
 def ghost_detail(request, ghost_id):
   ghost = Ghost.objects.get(id=ghost_id)
   return render(request, 'ghosts/detail.html', { 'ghost': ghost })
+
+class Home(LoginView):
+  template_name = 'home.html'
 
 class GhostCreate(CreateView):
   model = Ghost

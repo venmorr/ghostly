@@ -7,9 +7,15 @@
 
 {% block content %}
 
+{% if ghost %}
+    <h1>Edit {{ ghost.name }}</h1>
+  {% else %}
+    <h1>Add a Ghost</h1>
+  {% endif %}
+
 <div class="page-header">
-  <h1>Add a Cat</h1>
-  <img src="{% static 'images/nerd-cat.svg' %}" alt="A cat using a computer"/>
+  <h1>Add a Ghost</h1>
+  <img src="{% static 'images/nerd-ghost.svg' %}" alt="A ghost using a computer"/>
 </div>
 {% comment %} 
   Leaving the action empty makes the form post to the same url used to display it
