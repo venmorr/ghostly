@@ -21,6 +21,10 @@ def ghost_detail(request, ghost_id):
 class Home(LoginView):
   template_name = 'home.html'
 
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
+
 class GhostCreate(CreateView):
   model = Ghost
   fields = '__all__'
