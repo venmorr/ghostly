@@ -9,4 +9,5 @@ urlpatterns = [
   path('ghosts/create/', views.GhostCreate.as_view(), name='ghost-create'),
   path('ghosts/<int:pk>/update/', views.GhostUpdate.as_view(), name='ghost-update'),
   path('ghosts/<int:pk>/delete/', views.GhostDelete.as_view(), name='ghost-delete'),
+  path('accounts/signup/', views.signup, name='signup'),
 ]
