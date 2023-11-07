@@ -26,6 +26,10 @@
       <h2>A {{ ghost.type }} ghost.</h2>
     {% endif %}
     <p>{{ ghost.description }}</p>
+    <div class="ghost-actions">
+      <a href="{% url 'ghost-update' ghost.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'ghost-delete' ghost.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 

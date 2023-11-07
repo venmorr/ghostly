@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Ghost
 
 def home(request):
@@ -20,3 +20,12 @@ def ghost_detail(request, ghost_id):
 class GhostCreate(CreateView):
   model = Ghost
   fields = '__all__'
+  success_url = '/ghosts/'
+
+class GhostUpdate(UpdateView):
+  model = Ghost
+  fields = ['type', 'description']
+
+class GhostDelete(DeleteView):
+  model = Ghost
+  success_url = '/ghosts/'
