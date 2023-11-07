@@ -30,13 +30,13 @@ body {
   --nav-bg-ff: #0d0d0d;
   --borders: #a4f644 solid 2px;
   --text-color: #a4f644;
-  --link-hover-color: #10389e;
-  --button-bg: #f5f5f5;
-  --button-bg-hover: #e2e2e2;
-  --submit: #1a8000;
-  --warn: #ff6600;
-  --danger: #dc141e;
-  --secondary: #393939;
+  --link-hover-color: #a4f644;
+  --button-bg: #0d0d0d;
+  --button-bg-hover: #a4f644;
+  --submit: #a4f644;
+  --warn: #a4f644;
+  --danger: #a4f644;
+  --secondary: #a4f644;
   --card-box-shadow: 5px 5px 6px -1px #a4f644;
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
@@ -69,8 +69,9 @@ main {
   padding: 0 10px;
 }
 
-h1 {
+#home-title {
   color: #a4f644;
+  font-size: 72px;
 }
 
 h2 {
@@ -118,11 +119,6 @@ nav li {
   align-items: center;
   margin: 20px;
 }
-
-
-
-
-
 
 .btn {
   font-size: var(--font-l);
