@@ -27,12 +27,14 @@ class Home(LoginView):
   template_name = 'home.html'
 
   def form_valid(self, form):
-    form.instance.user = self.request.user
-    return super().form_valid(form)
+    user = form.get_user()
+    login(self.request, user)
+    return redirect('ghost-index')
 
 class GhostCreate(LoginRequiredMixin, CreateView):
   model = Ghost
   fields = '__all__'
+  # fields = ['name', 'level', 'type', 'description']
   success_url = '/ghosts/'
 
 class GhostUpdate(UpdateView):

@@ -25,10 +25,6 @@
       <a href="{% url 'ghost-detail' ghost.id %}">
         <div class="card-content">
           <div class="card-img-container">
-            <img 
-              src="{% static 'images/sk8r-boi-cat.svg' %}" 
-              alt="A skater boy cat"
-            >
           </div>
           <h2 class="card-title">{{ ghost.name }}</h2>
           {% if ghost.level > 0 %}

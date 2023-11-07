@@ -26,24 +26,26 @@ body {
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
     'Helvetica Neue', sans-serif;
   min-height: 100vh;
-  --nav-bg: rgba(104, 197, 248, .7);
-  --nav-bg-ff: rgba(104, 197, 248, .9);
-  --borders: rgb(36, 116, 248) solid 2px;
-  --text-color: rgb(17, 20, 17);
-  --link-hover-color: rgb(16, 56, 158);
-  --button-bg: rgb(245, 245, 245);
-  --button-bg-hover: rgb(226, 226, 226);
-  --submit: rgb(26, 128, 0);
-  --warn: rgb(255, 102, 0);
-  --danger: rgb(220, 20, 30);
-  --secondary: rgb(57, 57, 57);
-  --card-box-shadow: 5px 5px 6px -1px #AAA;
+  --nav-bg: #0d0d0db3;
+  --nav-bg-ff: #0d0d0d;
+  --borders: #a4f644 solid 2px;
+  --text-color: #a4f644;
+  --link-hover-color: #10389e;
+  --button-bg: #f5f5f5;
+  --button-bg-hover: #e2e2e2;
+  --submit: #1a8000;
+  --warn: #ff6600;
+  --danger: #dc141e;
+  --secondary: #393939;
+  --card-box-shadow: 5px 5px 6px -1px #a4f644;
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
   --font-xl: 2.4rem;
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
+  background-color: #0d0d0d;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a4f644' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 header {
@@ -67,11 +69,23 @@ main {
   padding: 0 10px;
 }
 
-h2 {
-  font-size: var(--font-xl);
+h1 {
+  color: #a4f644;
 }
 
-nav a {
+h2 {
+  font-size: var(--font-xl);
+  color: #a4f644;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#header-logo-container {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
@@ -104,6 +118,11 @@ nav li {
   align-items: center;
   margin: 20px;
 }
+
+
+
+
+
 
 .btn {
   font-size: var(--font-l);
@@ -263,7 +282,7 @@ nav li {
 
     nav,
     .header-logo-container {
-      background: rgba(104, 197, 248, .6);
+      background: #0d0d0d;
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }

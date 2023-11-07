@@ -3,12 +3,14 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  border-radius: 5px;
 }
 
 .card {
   width: 275px;
   margin: 10px;
   border: var(--borders);
+  background-color: #0d0d0d;
   box-shadow: var(--card-box-shadow);
 }
 
@@ -36,3 +38,4 @@
   margin: 5px 0;
   font-size: var(--font-reg);
 }
+
