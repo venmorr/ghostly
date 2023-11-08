@@ -45,6 +45,12 @@ main > section {
   flex-direction: column;
   width: 100%;
   margin: 14px 0 0px;
+  
+}
+
+label {
+  color: #a4f644;
+  font-size: large;
 }
 
 .login label {
@@ -55,6 +61,8 @@ main > section {
 .login input {
   font-size: var(--font-l);
   padding: 2px 4px;
+  color: #0d0d0d;
+  background-color: #a4f644;
 }
 
 .login .btn {

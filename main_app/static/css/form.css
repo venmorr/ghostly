@@ -8,6 +8,7 @@ table {
   padding: 0 40px;
   width: 100%;
   border-spacing: 0 20px;
+
 }
 
 th {
@@ -16,24 +17,41 @@ th {
   font-weight: normal;
   vertical-align: top;
   font-size: var(--font-reg);
+  color: #a4f644;
 }
 
 td {
   max-width: 60%;
+  color: #a4f644;
 }
 
 td > * {
   width: 100%;
   padding: 2px 4px;
   font-size: var(--font-l);
+  color: #a4f644;
 }
 
 td > textarea {
   height: calc(4 * var(--font-l) + 8px);
   font-family: inherit;
+  color: #a4f644;
 }
 
 .btn {
   align-self: flex-end;
   margin-right: 40px;
+}
+
+label {
+  color: #a4f644;
+  font-size: large;
+}
+
+input {
+  font-size: large;
+}
+
+#id_description {
+  font-size: large;
 }
