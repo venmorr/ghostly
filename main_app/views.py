@@ -31,11 +31,16 @@ class Home(LoginView):
     login(self.request, user)
     return redirect('ghost-index')
 
+
 class GhostCreate(LoginRequiredMixin, CreateView):
   model = Ghost
   fields = '__all__'
-  # fields = ['name', 'level', 'type', 'description']
+  fields = ['name', 'level', 'type', 'description']
   success_url = '/ghosts/'
+
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
 class GhostUpdate(UpdateView):
   model = Ghost

@@ -20,12 +20,12 @@
   </div>
   <div class="ghost-details">
     <h1>{{ ghost.name }}</h1>
-    {% if ghost.level > 0 %}
-      <h2>A level {{ ghost.level }} {{ ghost.type }}</h2>
-    {% else %}
-      <h2>A {{ ghost.type }} ghost.</h2>
-    {% endif %}
-    <p>{{ ghost.description }}</p>
+    
+    <h2>A level {{ ghost.level }} {{ ghost.type }}</h2>
+    
+    
+    
+    <h2>{{ ghost.description }}</h2>
     <div class="ghost-actions">
       <a href="{% url 'ghost-update' ghost.id %}" class="btn warn">Edit</a>
       <a href="{% url 'ghost-delete' ghost.id %}" class="btn danger">Delete</a>
