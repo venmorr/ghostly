@@ -1,4 +1,4 @@
-# [Ghostly](https://ghostly.fly.dev/ghosts/) 
+# [Ghostly](https://ghostly.fly.dev) 
 
 # Your digital specter collector!
 
@@ -26,7 +26,7 @@ Record detailed descriptions of each ghost, including their appearance, behavior
 The user interface of Ghostly is designed to be simple and straightforward, making it accessible to users of all experience levels. You don't need to be a tech expert to start documenting your paranormal experiences.
 
   
-Try out Ghostly [here](https://ghostly.fly.dev/ghosts/),  
+Try out Ghostly [here](https://ghostly.fly.dev),  
 
 **Attributions**:
 - 
